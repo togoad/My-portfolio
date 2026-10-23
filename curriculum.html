@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#172a40">
+    <meta name="description" content="Currículum profesional de [Tu nombre]: experiencia, formación y competencias.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="[Tu nombre] — Currículum">
+    <meta property="og:description" content="Consulta la experiencia, formación y competencias de [Tu nombre].">
+    <title>[Tu nombre] — Currículum</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" defer></script>
+  </head>
+
+  <body class="cv-page">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header" id="inicio">
+      <div class="container nav-shell">
+        <a class="brand" href="index.html" aria-label="[Tu nombre], volver al portafolio">
+          <span class="brand-mark" aria-hidden="true">[TN]</span>
+          <span class="brand-name">[Tu nombre]<span class="brand-period">.</span></span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+          <span class="menu-toggle-label">Menú</span>
+          <span class="menu-icon" aria-hidden="true"><span></span><span></span></span>
+        </button>
+
+        <nav class="nav-links" id="primary-navigation" aria-label="Navegación principal">
+          <a href="index.html">Inicio</a>
+          <a href="index.html#sobre-mi">Sobre mí</a>
+          <a href="index.html#proyectos">Proyectos</a>
+          <a href="curriculum.html" aria-current="page">Currículum</a>
+          <a class="nav-cta" href="index.html#contacto">Contacto <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido" class="cv-main">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Ruta de navegación">
+          <a href="index.html">Portafolio</a><span aria-hidden="true">/</span><span aria-current="page">Currículum</span>
+        </nav>
+
+        <header class="cv-heading">
+          <p class="eyebrow">Currículum profesional</p>
+          <h1>[Tu nombre]</h1>
+          <p class="cv-role">[Puesto, profesión o especialidad]</p>
+          <p class="cv-summary">
+            [Escribe aquí un resumen profesional de tres o cuatro líneas: tu experiencia, tus áreas de especialidad,
+            el tipo de problemas que sabes resolver y el valor que quieres aportar a un equipo.]
+          </p>
+          <div class="cv-contact-row">
+            <span>[Ciudad, país]</span>
+            <a href="mailto:tu-correo@ejemplo.com">tu-correo@ejemplo.com</a>
+            <a href="https://www.linkedin.com/in/tu-usuario/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+          </div>
+        </header>
+
+        <div class="cv-layout">
+          <div class="cv-primary-column">
+            <section class="cv-section" aria-labelledby="cv-experience-title">
+              <div class="cv-section-heading"><span class="cv-section-number">01</span><h2 id="cv-experience-title">Experiencia profesional</h2></div>
+              <div class="cv-timeline">
+                <article class="cv-entry">
+                  <div class="cv-entry-date">[Mes Año] — [Actualidad / Mes Año]</div>
+                  <div class="cv-entry-body">
+                    <h3>[Puesto más reciente]</h3>
+                    <p class="cv-entry-org">[Empresa u organización] <span>·</span> [Ciudad o remoto]</p>
+                    <p>[Resume tus responsabilidades principales, el alcance de tu trabajo y los resultados que conseguiste. Incluye datos concretos cuando puedas.]</p>
+                    <ul><li>[Logro o responsabilidad relevante]</li><li>[Logro o responsabilidad relevante]</li></ul>
+                  </div>
+                </article>
+                <article class="cv-entry">
+                  <div class="cv-entry-date">[Mes Año] — [Mes Año]</div>
+                  <div class="cv-entry-body">
+                    <h3>[Puesto anterior, práctica o proyecto]</h3>
+                    <p class="cv-entry-org">[Empresa u organización] <span>·</span> [Ciudad]</p>
+                    <p>[Explica brevemente qué hiciste, con quién colaboraste y qué aprendiste o mejoraste.]</p>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <section class="cv-section" aria-labelledby="cv-education-title">
+              <div class="cv-section-heading"><span class="cv-section-number">02</span><h2 id="cv-education-title">Formación</h2></div>
+              <div class="cv-timeline">
+                <article class="cv-entry">
+                  <div class="cv-entry-date">[Año de inicio] — [Año de fin]</div>
+                  <div class="cv-entry-body">
+                    <h3>[Título, grado o formación]</h3>
+                    <p class="cv-entry-org">[Universidad o centro] <span>·</span> [Ciudad]</p>
+                    <p>[Especialización, mención o información relacionada con el puesto que buscas.]</p>
+                  </div>
+                </article>
+                <article class="cv-entry">
+                  <div class="cv-entry-date">[Año]</div>
+                  <div class="cv-entry-body">
+                    <h3>[Curso o certificación relevante]</h3>
+                    <p class="cv-entry-org">[Entidad que lo imparte]</p>
+                  </div>
+                </article>
+              </div>
+            </section>
+          </div>
+
+          <aside class="cv-sidebar" aria-label="Competencias y datos adicionales">
+            <section class="cv-side-section" aria-labelledby="cv-skills-title">
+              <h2 id="cv-skills-title">Competencias</h2>
+              <ul class="cv-skill-list">
+                <li>[Competencia principal]</li>
+                <li>[Competencia]</li>
+                <li>[Competencia]</li>
+                <li>[Competencia]</li>
+              </ul>
+            </section>
+            <section class="cv-side-section" aria-labelledby="cv-tools-title">
+              <h2 id="cv-tools-title">Herramientas</h2>
+              <ul class="cv-skill-list">
+                <li>[Herramienta o tecnología]</li>
+                <li>[Herramienta]</li>
+                <li>[Herramienta]</li>
+              </ul>
+            </section>
+            <section class="cv-side-section" aria-labelledby="cv-languages-title">
+              <h2 id="cv-languages-title">Idiomas</h2>
+              <ul class="cv-language-list">
+                <li><span>[Idioma]</span><span>[Nivel]</span></li>
+                <li><span>[Idioma]</span><span>[Nivel]</span></li>
+              </ul>
+            </section>
+            <section class="cv-side-section" aria-labelledby="cv-interests-title">
+              <h2 id="cv-interests-title">Intereses profesionales</h2>
+              <p>[Sectores, temas o retos que te interesa explorar.]</p>
+            </section>
+          </aside>
+        </div>
+
+        <div class="cv-bottom-link"><a class="inline-link" href="index.html">Volver al portafolio <span aria-hidden="true">→</span></a></div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">[TN]</span><span class="brand-name">[Tu nombre]<span class="brand-period">.</span></span></a>
+        <p>© <span id="current-year"></span> [Tu nombre]</p>
+        <a class="back-top" href="#inicio">Volver arriba <span aria-hidden="true">↑</span></a>
+      </div>
+    </footer>
+  </body>
+</html>
