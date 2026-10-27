@@ -1,6 +1,6 @@
 # Portfolio de Adrián Torres
 
-Portfolio web personal de Adrián Torres, estudiante de 1.º de ASIR en el IES Medina Azahara (Córdoba). Presenta su perfil, formación, experiencia práctica con sistemas y redes, e información de contacto. Está construido con HTML, CSS y JavaScript nativos y se puede publicar directamente en GitHub Pages.
+Portfolio web personal de Adrián Torres, estudiante de ASIR en el IES Medina Azahara (Córdoba). Presenta su perfil, formación, experiencia práctica con sistemas y redes, certificaciones e información de contacto. Está construido con HTML, CSS y JavaScript nativos y se puede publicar directamente en GitHub Pages.
 
 ## Archivos
 
@@ -18,10 +18,11 @@ portfolio-profesional/
 
 ## Personalizar el contenido
 
-- El contenido actual recoge la formación, sistemas operativos, prácticas de redes, idiomas y experiencia que Adrián ha indicado.
+- El contenido actual recoge la formación, sistemas operativos, configuración de redes, idiomas y experiencia que Adrián ha indicado.
 - En `index.html` puedes actualizar la presentación y las tarjetas de proyectos.
-- En `curriculum.html`, duplica un bloque `<article class="case-study">` dentro de `#portfolio` para añadir más proyectos o prácticas. Incluye el contexto, tu aportación, las herramientas, el resultado y enlaces públicos válidos cuando los tengas.
+- En `curriculum.html`, duplica un bloque `<article class="case-study">` dentro de `#portfolio` para añadir más proyectos o trabajos técnicos. Incluye el área, tu aportación, las herramientas, el resultado y enlaces públicos válidos cuando los tengas.
 - Si quieres más detalle, añade el nombre oficial y las fechas de las certificaciones de Packet Tracer y los nombres de las herramientas concretas que utilizaste.
+- El apartado de certificaciones tiene categorías separadas para titulaciones y certificaciones generales, y para programación. Añade tus datos en la categoría que corresponda.
 - Puedes sustituir `assets/profile-placeholder.svg` por una fotografía personal y actualizar su ruta y texto alternativo en `index.html`.
 - El email actual es `atorgom3001@gmail.com`. Cámbialo si prefieres publicar otra dirección.
 
