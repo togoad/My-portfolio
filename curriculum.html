@@ -3,7 +3,20 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#080c18">
+    <meta name="theme-color" content="#f5f7ff">
+    <script>
+      try {
+        const savedTheme = localStorage.getItem("portfolio-theme");
+        const savedLanguage = localStorage.getItem("portfolio-language");
+        const savedMotion = localStorage.getItem("portfolio-motion");
+        document.documentElement.dataset.theme = savedTheme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.animations = savedMotion === "off" ? "off" : "on";
+        document.documentElement.lang = savedLanguage === "en" ? "en" : "es";
+      } catch (_) {
+        document.documentElement.dataset.theme = "light";
+        document.documentElement.dataset.animations = "on";
+      }
+    </script>
     <meta name="description" content="Currículum y portfolio técnico de Adrián Torres, estudiante de ASIR interesado en ciberseguridad.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Adrián Torres — Currículum y proyectos">
@@ -37,6 +50,23 @@
           <a href="#certificaciones">Certificaciones</a>
           <a href="#formacion">Formación</a>
           <a href="index.html#contacto" class="nav-cta">Contacto <span aria-hidden="true">↗</span></a>
+          <details class="preferences">
+            <summary><span class="preferences-symbol" aria-hidden="true">◐</span><span>Ajustes</span></summary>
+            <div class="preferences-panel">
+              <fieldset class="preference-group">
+                <legend>Idioma</legend>
+                <div class="preference-options"><button type="button" data-language-choice="es" aria-pressed="true">ES</button><button type="button" data-language-choice="en" aria-pressed="false">EN</button></div>
+              </fieldset>
+              <fieldset class="preference-group">
+                <legend>Aspecto</legend>
+                <div class="preference-options"><button type="button" data-theme-choice="light" aria-pressed="true">Claro</button><button type="button" data-theme-choice="dark" aria-pressed="false">Oscuro</button></div>
+              </fieldset>
+              <fieldset class="preference-group">
+                <legend>Movimiento</legend>
+                <button class="motion-toggle" type="button" data-motion-toggle aria-pressed="true"><span class="motion-indicator" aria-hidden="true"></span><span data-motion-label>Animaciones: activadas</span></button>
+              </fieldset>
+            </div>
+          </details>
         </nav>
       </div>
     </header>
@@ -150,7 +180,7 @@
             <article class="certification-card">
               <p class="certification-category">02 / PROGRAMACIÓN</p>
               <h3>Certificaciones en programación</h3>
-              <p class="certification-empty">Añade aquí los títulos de cursos o certificaciones de programación, junto con la entidad emisora y la fecha.</p>
+              <p class="certification-empty">Actualmente no tengo certificaciones en programación.</p>
             </article>
           </div>
         </section>

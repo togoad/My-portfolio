@@ -1,13 +1,13 @@
-# Portfolio de Adrián Torres
+# Portfolio de Adrián Torres · v0.4
 
-Portfolio web personal de Adrián Torres, estudiante de ASIR en el IES Medina Azahara (Córdoba). Presenta su perfil, formación, experiencia práctica con sistemas y redes, certificaciones e información de contacto. Está construido con HTML, CSS y JavaScript nativos y se puede publicar directamente en GitHub Pages.
+Portfolio personal para presentar formación, conocimientos, experiencia práctica, proyectos y vías de contacto. Está creado con HTML, CSS y JavaScript nativos, preparado para publicarse directamente con GitHub Pages.
 
-## Archivos
+## Contenido
 
 ```text
-portfolio-profesional/
-├── index.html              # Página de presentación y selección de proyectos
-├── curriculum.html         # Currículum online y fichas de proyecto
+portfolio-adrian-futurista/
+├── index.html              # Presentación, perfil y proyectos
+├── curriculum.html         # Currículum online, certificaciones y portfolio
 ├── assets/
 │   ├── favicon.svg
 │   └── profile-placeholder.svg
@@ -16,17 +16,21 @@ portfolio-profesional/
 └── .nojekyll
 ```
 
-## Personalizar el contenido
+## Preferencias
 
-- El contenido actual recoge la formación, sistemas operativos, configuración de redes, idiomas y experiencia que Adrián ha indicado.
-- En `index.html` puedes actualizar la presentación y las tarjetas de proyectos.
-- En `curriculum.html`, duplica un bloque `<article class="case-study">` dentro de `#portfolio` para añadir más proyectos o trabajos técnicos. Incluye el área, tu aportación, las herramientas, el resultado y enlaces públicos válidos cuando los tengas.
-- Si quieres más detalle, añade el nombre oficial y las fechas de las certificaciones de Packet Tracer y los nombres de las herramientas concretas que utilizaste.
-- El apartado de certificaciones tiene categorías separadas para titulaciones y certificaciones generales, y para programación. Añade tus datos en la categoría que corresponda.
-- Puedes sustituir `assets/profile-placeholder.svg` por una fotografía personal y actualizar su ruta y texto alternativo en `index.html`.
-- El email actual es `atorgom3001@gmail.com`. Cámbialo si prefieres publicar otra dirección.
+- La página abre en modo claro. En **Ajustes** se puede cambiar entre claro y oscuro.
+- El mismo menú permite cambiar el idioma entre español e inglés y activar o desactivar las animaciones.
+- Las preferencias se guardan en el navegador del visitante.
+- El apartado de certificaciones de programación indica que actualmente no hay ninguna.
+- El currículum se consulta en línea desde `curriculum.html`; no se ofrece como descarga.
 
-El currículum se consulta en `curriculum.html`; no se ofrece como descarga. El contacto abre un mensaje de correo y no necesita servidor.
+## Actualizar el contenido
+
+- Edita `index.html` para actualizar el perfil, los proyectos, la formación o el contacto.
+- Edita `curriculum.html` para actualizar la trayectoria, las certificaciones y las fichas de proyectos.
+- Puedes duplicar una ficha `<article class="case-study">` dentro de `#portfolio` para añadir un proyecto. Añade ejemplos concretos, herramientas, resultados y enlaces públicos cuando estén disponibles.
+- Sustituye `assets/profile-placeholder.svg` si quieres añadir una imagen personal y ajusta su texto alternativo en el HTML.
+- El correo publicado es `atorgom3001@gmail.com`.
 
 ## Publicar con GitHub Pages
 
@@ -35,4 +39,4 @@ El currículum se consulta en `curriculum.html`; no se ofrece como descarga. El 
 3. En **Build and deployment**, selecciona **Deploy from a branch**, rama `main` y carpeta `/(root)`. Guarda los cambios.
 4. Espera a que termine el despliegue. GitHub mostrará la dirección de la web en esa misma página.
 
-No necesita instalar dependencias ni compilar. También puedes abrir `index.html` directamente para ver una vista local.
+No necesita dependencias ni compilación. También puedes abrir `index.html` directamente para ver una versión local.
