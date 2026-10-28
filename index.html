@@ -27,6 +27,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/assistant-config.js" defer></script>
     <script src="js/main.js" defer></script>
   </head>
 
@@ -229,9 +230,34 @@
         </div>
       </section>
 
+      <section class="section section-employer" id="resumen-empresa" aria-labelledby="employer-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow"><span class="section-index">05</span> Perfil profesional</p>
+            <h2 id="employer-title">Lo esencial para<br><span class="muted-heading">conocer mi perfil.</span></h2>
+          </div>
+          <div class="employer-summary-card">
+            <div class="employer-summary-main">
+              <p class="summary-label"><span aria-hidden="true">✳</span> Resumen para empresas</p>
+              <p class="summary-copy">Soy estudiante de ASIR en el IES Medina Azahara y busco prácticas u oportunidades laborales iniciales. Tengo experiencia práctica en instalación y reparación de equipos, administración de sistemas Linux y Windows, y configuración de redes con Cisco Packet Tracer. Me interesan los sistemas, las redes, el soporte técnico y la ciberseguridad.</p>
+        <div class="summary-tags" aria-label="Áreas y herramientas"><span>ASIR</span><span>Linux</span><span>Windows</span><span>Redes</span><span>Cisco Packet Tracer</span></div>
+              <div class="summary-actions">
+                <a class="button button-primary" href="mailto:atorgom3001@gmail.com?subject=Oportunidad%20profesional">Contactar para oportunidades <span aria-hidden="true">↗</span></a>
+                <a class="inline-link" href="curriculum.html">Consultar currículum <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+            <aside class="employer-facts" aria-label="Datos destacados">
+              <div><span>Formación</span><strong>ASIR · IES Medina Azahara</strong></div>
+              <div><span>Objetivo</span><strong>Prácticas y oportunidades iniciales</strong></div>
+              <div><span>Idiomas</span><strong>Español · Inglés intermedio</strong></div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
       <section class="contact-section" id="contacto" aria-labelledby="contact-title">
         <div class="container contact-card">
-          <p class="eyebrow"><span class="section-index">05</span> Contacto</p>
+          <p class="eyebrow"><span class="section-index">06</span> Contacto</p>
           <h2 id="contact-title">¿Hablamos de<br><span>tecnología?</span></h2>
           <p class="contact-copy">Busco oportunidades laborales y un lugar donde realizar las prácticas de ASIR. Me interesan los sistemas, las redes, el soporte técnico y la ciberseguridad.</p>
           <div class="contact-actions">
@@ -249,5 +275,33 @@
         <a class="back-top" href="#inicio">Inicio <span aria-hidden="true">↑</span></a>
       </div>
     </footer>
+
+    <div class="assistant-widget" data-assistant-widget>
+      <button class="assistant-launcher" type="button" data-assistant-open aria-expanded="false" aria-controls="assistant-panel">
+        <span class="assistant-launcher-icon" aria-hidden="true">✳</span><span>Pregúntale a mi portfolio</span>
+      </button>
+      <section class="assistant-panel" id="assistant-panel" data-assistant-panel aria-labelledby="assistant-title" hidden>
+        <header class="assistant-header">
+          <div><p class="assistant-overline"><span class="assistant-live-dot" aria-hidden="true"></span> Asistente del portfolio</p><h2 id="assistant-title">¿Qué quieres saber de Adrián?</h2></div>
+          <button class="assistant-close" type="button" data-assistant-close aria-label="Cerrar asistente">×</button>
+        </header>
+        <p class="assistant-scope">Responde solo sobre Adrián y la información publicada en este portfolio.</p>
+        <div class="assistant-suggestions" data-assistant-suggestions aria-label="Preguntas sugeridas">
+          <button type="button" data-assistant-question-es="¿Qué conocimientos tiene Adrián?" data-assistant-question-en="What skills does Adrián have?">¿Qué conocimientos tiene?</button>
+          <button type="button" data-assistant-question-es="¿Qué oportunidades busca Adrián?" data-assistant-question-en="What opportunities is Adrián looking for?">¿Qué oportunidades busca?</button>
+          <button type="button" data-assistant-question-es="¿Qué proyectos aparecen en el portfolio?" data-assistant-question-en="What projects are in the portfolio?">¿Qué proyectos aparecen?</button>
+        </div>
+        <div class="assistant-messages" data-assistant-messages role="log" aria-live="polite" aria-relevant="additions">
+          <p class="assistant-welcome">Hola. Puedo responder preguntas sobre el perfil, los conocimientos, la formación y los proyectos de Adrián.</p>
+        </div>
+        <p class="assistant-status" data-assistant-status role="status" aria-live="polite"></p>
+        <form class="assistant-form" data-assistant-form>
+          <label class="sr-only" for="assistant-question">Escribe una pregunta sobre Adrián</label>
+          <input id="assistant-question" name="question" type="text" maxlength="500" placeholder="Escribe una pregunta sobre Adrián…" autocomplete="off" required>
+          <button type="submit" aria-label="Enviar pregunta">Enviar <span aria-hidden="true">↑</span></button>
+        </form>
+        <p class="assistant-privacy">Asistente IA · Las preguntas se envían a un servicio de IA; no incluyas información personal o sensible.</p>
+      </section>
+    </div>
   </body>
 </html>

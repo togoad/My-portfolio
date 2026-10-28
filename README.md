@@ -1,42 +1,48 @@
-# Portfolio de Adrián Torres · v0.4
+# Portfolio de Adrián Torres · v0.5
 
-Portfolio personal para presentar formación, conocimientos, experiencia práctica, proyectos y vías de contacto. Está creado con HTML, CSS y JavaScript nativos, preparado para publicarse directamente con GitHub Pages.
+Portfolio personal para presentar formación, experiencia práctica, conocimientos, proyectos y vías de contacto. Está hecho con HTML, CSS y JavaScript y se publica en GitHub Pages. Esta versión añade un resumen dirigido a empresas y un asistente que responde sobre la información publicada en el portfolio.
 
 ## Contenido
 
 ```text
 portfolio-adrian-futurista/
-├── index.html              # Presentación, perfil y proyectos
+├── index.html              # Presentación, proyectos y resumen para empresas
 ├── curriculum.html         # Currículum online, certificaciones y portfolio
 ├── assets/
-│   ├── favicon.svg
-│   └── profile-placeholder.svg
 ├── css/styles.css
-├── js/main.js
+├── js/
+│   ├── main.js
+│   └── assistant-config.js # URL pública del backend del asistente
+├── worker/
+│   ├── wrangler.jsonc
+│   └── src/index.js        # Backend seguro para el asistente IA
 └── .nojekyll
 ```
 
-## Preferencias
+## Preferencias de la web
 
-- La página abre en modo claro. En **Ajustes** se puede cambiar entre claro y oscuro.
-- El mismo menú permite cambiar el idioma entre español e inglés y activar o desactivar las animaciones.
-- Las preferencias se guardan en el navegador del visitante.
-- El apartado de certificaciones de programación indica que actualmente no hay ninguna.
-- El currículum se consulta en línea desde `curriculum.html`; no se ofrece como descarga.
+- En **Ajustes** se puede elegir modo claro u oscuro, español o inglés, y activar o desactivar las animaciones. La página abre en modo claro.
+- El currículum se consulta en línea; no se ofrece como descarga.
+- La sección de certificaciones de programación indica que actualmente no hay ninguna.
 
-## Actualizar el contenido
+## Activar el asistente IA
 
-- Edita `index.html` para actualizar el perfil, los proyectos, la formación o el contacto.
-- Edita `curriculum.html` para actualizar la trayectoria, las certificaciones y las fichas de proyectos.
-- Puedes duplicar una ficha `<article class="case-study">` dentro de `#portfolio` para añadir un proyecto. Añade ejemplos concretos, herramientas, resultados y enlaces públicos cuando estén disponibles.
-- Sustituye `assets/profile-placeholder.svg` si quieres añadir una imagen personal y ajusta su texto alternativo en el HTML.
-- El correo publicado es `atorgom3001@gmail.com`.
+La web de GitHub Pages es estática. El asistente real usa un Cloudflare Worker para que la clave de OpenAI no aparezca en el código público. El asistente recibe solo las preguntas recientes; el Worker añade un conjunto limitado de datos del portfolio. No habilita búsqueda web y la petición a la API incluye `store: false`.
 
-## Publicar con GitHub Pages
+1. Crea una cuenta de Cloudflare y configura Wrangler en el ordenador. Desde la carpeta `worker/`, inicia sesión con `npx wrangler login`.
+2. En `worker/wrangler.jsonc`, cambia `SITE_ORIGIN` por el **origen** de tu página de GitHub Pages, por ejemplo `https://tuusuario.github.io`. Si usas dominio propio, pon ese origen. No añadas la ruta del repositorio ni una barra final.
+3. Crea una clave de API de OpenAI y guárdala en el Worker con `npx wrangler secret put OPENAI_API_KEY`. Escribe la clave cuando Wrangler la solicite; no la pegues en el HTML, JavaScript ni en GitHub.
+4. Desde `worker/`, publica el backend con `npx wrangler deploy`. El archivo `wrangler.jsonc` configura un límite aproximado de ocho solicitudes por minuto y desactiva el registro de Worker. Revisa y configura los límites de gasto de tu cuenta de API antes de publicarlo.
+5. Copia la URL que Wrangler muestra al desplegar y ponla en `window.PORTFOLIO_ASSISTANT_ENDPOINT` dentro de `js/assistant-config.js`, sin añadir `/chat` al final.
+6. Sube el contenido de esta carpeta a la raíz de `main` en tu repositorio y configura GitHub Pages para publicar desde `main` y `/(root)`.
 
-1. Sube el **contenido** de esta carpeta a la raíz de la rama `main` del repositorio. `index.html`, `curriculum.html`, `assets/`, `css/` y `js/` deben quedar directamente en esa raíz.
-2. En el repositorio, abre **Settings → Pages**.
-3. En **Build and deployment**, selecciona **Deploy from a branch**, rama `main` y carpeta `/(root)`. Guarda los cambios.
-4. Espera a que termine el despliegue. GitHub mostrará la dirección de la web en esa misma página.
+El modelo predeterminado es `gpt-6-luna`; puedes cambiar `OPENAI_MODEL` en `worker/wrangler.jsonc` si quieres usar otro modelo disponible para tu cuenta. La API puede generar costes según su uso. No compartas la clave en esta conversación ni la incluyas en el ZIP.
 
-No necesita dependencias ni compilación. También puedes abrir `index.html` directamente para ver una versión local.
+Si el asistente todavía no está desplegado o configurado, la web muestra un aviso y mantiene visibles el currículum y el contacto.
+
+## Actualizar los datos
+
+- Edita `index.html` y `curriculum.html` para actualizar el perfil, los proyectos, la formación o el contacto.
+- El Worker contiene los datos que el asistente puede usar, en `worker/src/index.js`, dentro de `PORTFOLIO_FACTS`. Si cambias un dato del portfolio, actualiza también esa lista para que las respuestas coincidan.
+- Añade resultados, enlaces o nuevas herramientas a proyectos solo cuando tengas datos concretos para publicarlos.
+- El email publicado es `atorgom3001@gmail.com`.

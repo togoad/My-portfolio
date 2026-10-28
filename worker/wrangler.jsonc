@@ -1,0 +1,24 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "portfolio-adrian-assistant",
+  "main": "src/index.js",
+  "compatibility_date": "2026-10-28",
+  "workers_dev": true,
+  "observability": {
+    "enabled": false
+  },
+  "vars": {
+    "SITE_ORIGIN": "https://TU-USUARIO.github.io",
+    "OPENAI_MODEL": "gpt-6-luna"
+  },
+  "ratelimits": [
+    {
+      "name": "RATE_LIMIT",
+      "namespace_id": "504238",
+      "simple": {
+        "limit": 8,
+        "period": 60
+      }
+    }
+  ]
+}

@@ -128,6 +128,7 @@ const translations = {
   "tecnología?": "technology?",
   "Busco oportunidades laborales y un lugar donde realizar las prácticas de ASIR. Me interesan los sistemas, las redes, el soporte técnico y la ciberseguridad.": "I’m looking for work opportunities and a place to complete my ASIR internship. I’m interested in systems, networking, technical support, and cybersecurity.",
   "Consultar mi currículum": "View my résumé",
+  "Consultar currículum": "View résumé",
   "Inicio": "Home",
   "Currículum online": "Online résumé",
   "Arriba": "Back to top",
@@ -192,7 +193,36 @@ const translations = {
   "Puedes duplicar estas fichas para añadir nuevos proyectos, prácticas o evidencias técnicas.": "You can duplicate these project pages to add new projects or technical evidence.",
   "Volver al inicio": "Back to home",
   "Animaciones: activadas": "Animations: on",
-  "Animaciones: desactivadas": "Animations: off"
+  "Animaciones: desactivadas": "Animations: off",
+  "Perfil profesional": "Professional profile",
+  "Lo esencial para": "The essentials to",
+  "conocer mi perfil.": "understand my profile.",
+  "Resumen para empresas": "Employer summary",
+  "Soy estudiante de ASIR en el IES Medina Azahara y busco prácticas u oportunidades laborales iniciales. Tengo experiencia práctica en instalación y reparación de equipos, administración de sistemas Linux y Windows, y configuración de redes con Cisco Packet Tracer. Me interesan los sistemas, las redes, el soporte técnico y la ciberseguridad.": "I’m an ASIR student at IES Medina Azahara looking for an internship or an entry-level opportunity. I have practical experience installing and repairing equipment, administering Linux and Windows systems, and configuring networks with Cisco Packet Tracer. I’m interested in systems, networking, technical support, and cybersecurity.",
+  "Contactar para oportunidades": "Contact me about opportunities",
+  "Objetivo": "Goal",
+  "Prácticas y oportunidades iniciales": "Internships and entry-level opportunities",
+  "Español · Inglés intermedio": "Spanish · Intermediate English",
+  "Pregúntale a mi portfolio": "Ask my portfolio",
+  "Asistente del portfolio": "Portfolio assistant",
+  "¿Qué quieres saber de Adrián?": "What would you like to know about Adrián?",
+  "Responde solo sobre Adrián y la información publicada en este portfolio.": "It answers only about Adrián using information published in this portfolio.",
+  "Preguntas sugeridas": "Suggested questions",
+  "¿Qué conocimientos tiene?": "What skills does he have?",
+  "¿Qué oportunidades busca?": "What opportunities is he looking for?",
+  "¿Qué proyectos aparecen?": "What projects are featured?",
+  "Hola. Puedo responder preguntas sobre el perfil, los conocimientos, la formación y los proyectos de Adrián.": "Hello. I can answer questions about Adrián’s profile, skills, education, and projects.",
+  "Escribe una pregunta sobre Adrián": "Write a question about Adrián",
+  "Enviar": "Send",
+  "Asistente IA · Las preguntas se envían a un servicio de IA; no incluyas información personal o sensible.": "AI assistant · Questions are sent to an AI service; do not include personal or sensitive information.",
+  "El asistente todavía no está conectado. Puedes consultar el currículum o escribir a ator...": "The assistant is not connected yet. You can view the résumé or contact Adrián at ator...",
+  "No se pudo conectar con el asistente. Inténtalo de nuevo.": "Could not connect to the assistant. Please try again.",
+  "El asistente no puede responder ahora.": "The assistant cannot respond right now.",
+  "El asistente está ocupado. Prueba de nuevo en un momento.": "The assistant is busy. Please try again in a moment.",
+  "Has enviado varias preguntas seguidas. Espera un minuto y vuelve a intentarlo.": "You have sent several questions in a row. Wait a minute and try again.",
+  "La pregunta es demasiado larga.": "That question is too long.",
+  "La respuesta del asistente no se pudo procesar.": "The assistant response could not be processed.",
+  "El asistente no devolvió una respuesta. Prueba con otra pregunta.": "The assistant returned no answer. Try another question."
 };
 
 const textNodes = [];
@@ -246,14 +276,20 @@ function translatePage(language) {
         "#primary-navigation": "Primary navigation",
         ".hero-visual": "Profile panel for Adrián Torres",
         ".terminal-body": "Profile details",
-        ".breadcrumbs": "Breadcrumb"
+        ".breadcrumbs": "Breadcrumb",
+        ".summary-tags": "Areas and tools",
+        ".employer-facts": "Key details",
+        ".assistant-suggestions": "Suggested questions"
       }
     : {
         ".brand[aria-label]": isResume ? "Adrián Torres, volver al inicio" : "Adrián Torres, inicio",
         "#primary-navigation": "Navegación principal",
         ".hero-visual": "Panel de perfil de Adrián Torres",
         ".terminal-body": "Datos del perfil",
-        ".breadcrumbs": "Ruta de navegación"
+        ".breadcrumbs": "Ruta de navegación",
+        ".summary-tags": "Áreas y herramientas",
+        ".employer-facts": "Datos destacados",
+        ".assistant-suggestions": "Preguntas sugeridas"
       };
   Object.entries(labels).forEach(([selector, label]) => {
     document.querySelector(selector)?.setAttribute("aria-label", label);
@@ -269,6 +305,16 @@ function translatePage(language) {
       ? (isOn ? "Animations: on" : "Animations: off")
       : (isOn ? "Animaciones: activadas" : "Animaciones: desactivadas");
   }
+
+  document.querySelectorAll("[data-assistant-question-es]").forEach((button) => {
+    button.dataset.assistantQuestion = language === "en" ? button.dataset.assistantQuestionEn : button.dataset.assistantQuestionEs;
+  });
+  const assistantInput = document.querySelector("#assistant-question");
+  const assistantClose = document.querySelector("[data-assistant-close]");
+  const assistantSend = document.querySelector("[data-assistant-form] button[type='submit']");
+  if (assistantInput) assistantInput.placeholder = language === "en" ? "Ask a question about Adrián…" : "Escribe una pregunta sobre Adrián…";
+  if (assistantClose) assistantClose.setAttribute("aria-label", language === "en" ? "Close assistant" : "Cerrar asistente");
+  if (assistantSend) assistantSend.setAttribute("aria-label", language === "en" ? "Send question" : "Enviar pregunta");
 }
 
 function setTheme(theme) {
@@ -315,6 +361,105 @@ document.querySelector("[data-motion-toggle]")?.addEventListener("click", (event
 setTheme(document.documentElement.dataset.theme === "dark" ? "dark" : "light");
 setAnimations(document.documentElement.dataset.animations !== "off");
 translatePage(document.documentElement.lang === "en" ? "en" : "es");
+
+const assistantPanel = document.querySelector("[data-assistant-panel]");
+const assistantLauncher = document.querySelector("[data-assistant-open]");
+const assistantMessages = document.querySelector("[data-assistant-messages]");
+const assistantForm = document.querySelector("[data-assistant-form]");
+const assistantInput = document.querySelector("#assistant-question");
+const assistantStatus = document.querySelector("[data-assistant-status]");
+const assistantHistory = [];
+
+function setAssistantOpen(open) {
+  if (!assistantPanel || !assistantLauncher) return;
+  assistantPanel.hidden = !open;
+  assistantLauncher.setAttribute("aria-expanded", String(open));
+  if (open) window.setTimeout(() => assistantInput?.focus(), 30);
+  else assistantLauncher.focus();
+}
+
+function addAssistantMessage(content, role) {
+  if (!assistantMessages) return;
+  const message = document.createElement("p");
+  message.className = role === "user" ? "assistant-message assistant-message-user" : "assistant-message";
+  message.textContent = content;
+  assistantMessages.append(message);
+  assistantMessages.scrollTop = assistantMessages.scrollHeight;
+}
+
+function assistantErrorText(spanish, language) {
+  const englishFallback = {
+    "No se pudo conectar con el asistente. Inténtalo de nuevo.": "Could not connect to the assistant. Please try again.",
+    "El asistente no puede responder ahora.": "The assistant cannot respond right now.",
+    "El asistente está ocupado. Prueba de nuevo en un momento.": "The assistant is busy. Please try again in a moment.",
+    "Has enviado varias preguntas seguidas. Espera un minuto y vuelve a intentarlo.": "You have sent several questions in a row. Wait a minute and try again.",
+    "La pregunta es demasiado larga.": "That question is too long.",
+    "La respuesta del asistente no se pudo procesar.": "The assistant response could not be processed.",
+    "El asistente no devolvió una respuesta. Prueba con otra pregunta.": "The assistant returned no answer. Try another question.",
+    "El asistente todavía no está configurado.": "The assistant is not configured yet."
+  };
+  return language === "en" ? (englishFallback[spanish] || "The assistant could not answer. Please try again.") : spanish;
+}
+
+async function askPortfolioAssistant(question) {
+  const endpoint = String(window.PORTFOLIO_ASSISTANT_ENDPOINT || "").trim().replace(/\/+$/, "");
+  const language = document.documentElement.lang;
+  addAssistantMessage(question, "user");
+  assistantHistory.push({ role: "user", content: question });
+  if (assistantHistory.length > 8) assistantHistory.splice(0, assistantHistory.length - 8);
+  const sendButton = assistantForm?.querySelector("button[type='submit']");
+  const suggestionButtons = document.querySelectorAll("[data-assistant-question]");
+  if (sendButton) sendButton.disabled = true;
+  suggestionButtons.forEach((button) => { button.disabled = true; });
+  if (assistantStatus) assistantStatus.textContent = language === "en" ? "Thinking…" : "Pensando…";
+
+  if (!endpoint) {
+    const notReady = language === "en"
+      ? "The assistant is not connected yet. You can view the résumé or contact Adrián by email."
+      : "El asistente todavía no está conectado. Puedes consultar el currículum o contactar con Adrián por correo.";
+    addAssistantMessage(notReady, "assistant");
+    if (assistantStatus) assistantStatus.textContent = "";
+    if (sendButton) sendButton.disabled = false;
+    suggestionButtons.forEach((button) => { button.disabled = false; });
+    return;
+  }
+
+  try {
+    const messages = assistantHistory.slice(-8);
+    const response = await fetch(`${endpoint}/chat`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ messages })
+    });
+    const result = await response.json().catch(() => ({}));
+    if (!response.ok) throw new Error(typeof result.error === "string" ? result.error : "No se pudo conectar con el asistente. Inténtalo de nuevo.");
+    if (typeof result.answer !== "string" || !result.answer.trim()) throw new Error("El asistente no devolvió una respuesta. Prueba con otra pregunta.");
+    addAssistantMessage(result.answer, "assistant");
+  } catch (error) {
+    addAssistantMessage(assistantErrorText(error.message, language), "assistant");
+  } finally {
+    if (assistantStatus) assistantStatus.textContent = "";
+    if (sendButton) sendButton.disabled = false;
+    suggestionButtons.forEach((button) => { button.disabled = false; });
+    assistantInput?.focus();
+  }
+}
+
+assistantLauncher?.addEventListener("click", () => setAssistantOpen(assistantPanel?.hidden ?? true));
+document.querySelector("[data-assistant-close]")?.addEventListener("click", () => setAssistantOpen(false));
+assistantForm?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const question = assistantInput?.value.trim();
+  if (!question || question.length > 500) return;
+  assistantInput.value = "";
+  askPortfolioAssistant(question);
+});
+document.querySelectorAll("[data-assistant-question]").forEach((button) => {
+  button.addEventListener("click", () => askPortfolioAssistant(button.dataset.assistantQuestion));
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && assistantPanel && !assistantPanel.hidden) setAssistantOpen(false);
+});
 
 const year = document.querySelector("#current-year");
 if (year) year.textContent = String(new Date().getFullYear());
