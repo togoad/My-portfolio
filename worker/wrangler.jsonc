@@ -8,7 +8,7 @@
     "enabled": false
   },
   "vars": {
-    "SITE_ORIGIN": "https://TU-USUARIO.github.io",
+    "SITE_ORIGIN": "https://togoad.github.io",
     "OPENAI_MODEL": "gpt-6-luna"
   },
   "ratelimits": [
