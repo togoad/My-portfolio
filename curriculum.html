@@ -27,7 +27,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/assistant-config.js" defer></script>
     <script src="js/main.js" defer></script>
   </head>
 
@@ -254,29 +253,28 @@
 
     <div class="assistant-widget" data-assistant-widget>
       <button class="assistant-launcher" type="button" data-assistant-open aria-expanded="false" aria-controls="assistant-panel">
-        <span class="assistant-launcher-icon" aria-hidden="true">✳</span><span>Pregúntale a mi portfolio</span>
+        <span class="assistant-launcher-icon" aria-hidden="true">✳</span><span>Consulta mi portfolio</span>
       </button>
       <section class="assistant-panel" id="assistant-panel" data-assistant-panel aria-labelledby="assistant-title" hidden>
         <header class="assistant-header">
-          <div><p class="assistant-overline"><span class="assistant-live-dot" aria-hidden="true"></span> Asistente del portfolio</p><h2 id="assistant-title">¿Qué quieres saber de Adrián?</h2></div>
+          <div><p class="assistant-overline"><span class="assistant-faq-dot" aria-hidden="true"></span> Respuestas del portfolio</p><h2 id="assistant-title">¿Qué quieres saber de Adrián?</h2></div>
           <button class="assistant-close" type="button" data-assistant-close aria-label="Cerrar asistente">×</button>
         </header>
-        <p class="assistant-scope">Responde solo sobre Adrián y la información publicada en este portfolio.</p>
-        <div class="assistant-suggestions" data-assistant-suggestions aria-label="Preguntas sugeridas">
+        <p class="assistant-scope">Respuestas fijas sobre Adrián y la información publicada en este portfolio.</p>
+        <div class="assistant-suggestions" data-assistant-suggestions aria-label="Preguntas frecuentes">
           <button type="button" data-assistant-question-es="¿Qué conocimientos tiene Adrián?" data-assistant-question-en="What skills does Adrián have?">¿Qué conocimientos tiene?</button>
           <button type="button" data-assistant-question-es="¿Qué oportunidades busca Adrián?" data-assistant-question-en="What opportunities is Adrián looking for?">¿Qué oportunidades busca?</button>
           <button type="button" data-assistant-question-es="¿Qué proyectos aparecen en el portfolio?" data-assistant-question-en="What projects are in the portfolio?">¿Qué proyectos aparecen?</button>
         </div>
         <div class="assistant-messages" data-assistant-messages role="log" aria-live="polite" aria-relevant="additions">
-          <p class="assistant-welcome">Hola. Puedo responder preguntas sobre el perfil, los conocimientos, la formación y los proyectos de Adrián.</p>
+          <p class="assistant-welcome">Hola. Elige una pregunta o escribe un tema. Las respuestas se basan en la información publicada en este portfolio.</p>
         </div>
-        <p class="assistant-status" data-assistant-status role="status" aria-live="polite"></p>
         <form class="assistant-form" data-assistant-form>
           <label class="sr-only" for="assistant-question">Escribe una pregunta sobre Adrián</label>
-          <input id="assistant-question" name="question" type="text" maxlength="500" placeholder="Escribe una pregunta sobre Adrián…" autocomplete="off" required>
+          <input id="assistant-question" name="question" type="text" maxlength="500" placeholder="Pregunta por formación, proyectos, conocimientos…" autocomplete="off" required>
           <button type="submit" aria-label="Enviar pregunta">Enviar <span aria-hidden="true">↑</span></button>
         </form>
-        <p class="assistant-privacy">Asistente IA · Las preguntas se envían a un servicio de IA; no incluyas información personal o sensible.</p>
+        <p class="assistant-privacy">Respuestas predefinidas · Tu pregunta no se envía a ningún servicio externo.</p>
       </section>
     </div>
   </body>
