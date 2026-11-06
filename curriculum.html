@@ -27,6 +27,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="alternate" type="application/rss+xml" title="Portfolio de Adrián Torres (RSS)" href="rss.xml">
+    <link rel="alternate" type="application/atom+xml" title="Portfolio de Adrián Torres (Atom)" href="atom.xml">
     <script src="js/main.js" defer></script>
   </head>
 
@@ -134,7 +136,7 @@
             </section>
           </div>
 
-          <aside class="cv-sidebar" aria-label="Conocimientos y áreas de interés">
+          <aside class="cv-sidebar" aria-label="Barra lateral de conocimientos y áreas de interés">
             <section class="cv-side-section" aria-labelledby="cv-skills-title">
               <h2 id="cv-skills-title">Conocimientos técnicos</h2>
               <ul class="cv-skill-list">
@@ -236,7 +238,7 @@
               <div class="case-links"><span>Cisco Packet Tracer</span><span>Configuración de redes</span></div>
             </div>
           </article>
-          <p class="case-template-note">Para más información contacta mediante el correo aportado en la página.</p>
+          <p class="case-template-note">Puedes duplicar estas fichas para añadir nuevos proyectos, prácticas o evidencias técnicas.</p>
         </section>
 
         <div class="cv-bottom-link"><a class="inline-link" href="index.html">← Volver al inicio <span aria-hidden="true">↗</span></a></div>
@@ -247,7 +249,12 @@
       <div class="container footer-inner">
         <a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">AT</span><span class="brand-name">ADRIÁN TORRES<span class="brand-period">.</span></span></a>
         <p><span>Currículum online</span><span>© <span id="current-year"></span> Adrián Torres</span></p>
-        <a class="back-top" href="#inicio">Arriba <span aria-hidden="true">↑</span></a>
+        <div class="footer-actions">
+          <nav class="footer-feeds" aria-label="Suscripciones RSS y Atom">
+            <a href="rss.xml">RSS</a><a href="atom.xml">Atom</a>
+          </nav>
+          <a class="back-top" href="#inicio">Arriba <span aria-hidden="true">↑</span></a>
+        </div>
       </div>
     </footer>
 

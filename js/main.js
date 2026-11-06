@@ -271,7 +271,9 @@ function translatePage(language) {
         ".terminal-body": "Profile details",
         ".breadcrumbs": "Breadcrumb",
         ".summary-tags": "Areas and tools",
-        ".employer-facts": "Key details",
+        ".employer-facts": "Profile highlights sidebar",
+        ".cv-sidebar": "Skills and areas of interest sidebar",
+        ".footer-feeds": "Subscribe to RSS and Atom feeds",
         ".assistant-suggestions": "Frequently asked questions"
       }
     : {
@@ -281,7 +283,9 @@ function translatePage(language) {
         ".terminal-body": "Datos del perfil",
         ".breadcrumbs": "Ruta de navegación",
         ".summary-tags": "Áreas y herramientas",
-        ".employer-facts": "Datos destacados",
+        ".employer-facts": "Barra lateral de datos destacados",
+        ".cv-sidebar": "Barra lateral de conocimientos y áreas de interés",
+        ".footer-feeds": "Suscripciones RSS y Atom",
         ".assistant-suggestions": "Preguntas frecuentes"
       };
   Object.entries(labels).forEach(([selector, label]) => {

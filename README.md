@@ -1,36 +1,23 @@
-# Portfolio de Adrián Torres · v5.2
+# Página web — Proyecto final
 
-Portfolio personal para presentar formación, experiencia práctica, conocimientos, proyectos y vías de contacto. Está hecho con HTML, CSS y JavaScript y se publica en GitHub Pages.
+Portfolio profesional de Adrián Torres, preparado para publicarse en GitHub Pages.
 
-## Contenido
+## Estructura
 
-```text
-portfolio-adrian-futurista-v5.2/
-├── index.html          # Presentación, proyectos y resumen profesional
-├── curriculum.html     # Currículum online, certificaciones y portfolio
-├── assets/             # Iconos y recursos visuales
-├── css/styles.css      # Diseño adaptable, temas y animaciones
-├── js/main.js          # Interacciones, idioma y respuestas predefinidas
-└── .nojekyll
-```
+- `index.html`: página principal.
+- `curriculum.html`: currículum y proyectos.
+- `css/styles.css`: estilos separados del HTML.
+- `js/main.js`: interacciones y respuestas predefinidas del portfolio.
+- `rss.xml`: feed RSS 2.0.
+- `atom.xml`: feed Atom 1.0.
+- `assets/`: iconos y recursos visuales.
 
-## Funciones
+Las páginas usan elementos semánticos: cabecera (`header`), cuerpo principal (`main`), barra lateral (`aside`) y pie (`footer`). Los enlaces a los feeds RSS y Atom aparecen en la cabecera del documento y en el footer.
 
-- Diseño adaptable a móvil y ordenador.
-- Selector de español e inglés, modo claro u oscuro y animaciones opcionales.
-- Currículum consultable en la web, sin descarga automática.
-- Apartado de certificaciones de programación que indica que actualmente no hay ninguna.
-- Panel de preguntas frecuentes con respuestas fijas basadas en la información del portfolio. Funciona en el navegador y no usa IA, claves API, Worker ni servicios externos para responder.
+## Publicación
 
-## Publicación en GitHub Pages
+Sube el contenido de esta carpeta a la raíz del repositorio `My-portfolio`, manteniendo la estructura de archivos. GitHub Pages debe publicar la rama `main` desde `/(root)`. La dirección esperada es:
 
-Sube el contenido de esta carpeta a la raíz de tu repositorio y conserva la estructura de carpetas. GitHub Pages debe publicar la rama `main` desde `/(root)`. La web estará disponible en:
+https://togoad.github.io/My-portfolio/
 
-`https://togoad.github.io/My-portfolio/`
-
-## Actualizar los datos
-
-- Edita `index.html` y `curriculum.html` para actualizar el perfil, los proyectos, la formación o el contacto.
-- Las respuestas predefinidas están en `js/main.js`, dentro de `fixedPortfolioAnswers`. Si cambias un dato del portfolio, actualiza también la respuesta correspondiente.
-- Añade enlaces, resultados o nuevas herramientas a proyectos solo cuando tengas datos concretos para publicarlos.
-- El email publicado es `atorgom3001@gmail.com`.
+Los feeds publicados quedarán en `https://togoad.github.io/My-portfolio/rss.xml` y `https://togoad.github.io/My-portfolio/atom.xml`.

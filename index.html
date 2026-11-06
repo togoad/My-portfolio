@@ -27,6 +27,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="alternate" type="application/rss+xml" title="Portfolio de Adrián Torres (RSS)" href="rss.xml">
+    <link rel="alternate" type="application/atom+xml" title="Portfolio de Adrián Torres (Atom)" href="atom.xml">
     <script src="js/main.js" defer></script>
   </head>
 
@@ -245,7 +247,7 @@
                 <a class="inline-link" href="curriculum.html">Consultar currículum <span aria-hidden="true">→</span></a>
               </div>
             </div>
-            <aside class="employer-facts" aria-label="Datos destacados">
+            <aside class="employer-facts" aria-label="Barra lateral de datos destacados">
               <div><span>Formación</span><strong>ASIR · IES Medina Azahara</strong></div>
               <div><span>Objetivo</span><strong>Prácticas y oportunidades iniciales</strong></div>
               <div><span>Idiomas</span><strong>Español · Inglés intermedio</strong></div>
@@ -271,7 +273,12 @@
       <div class="container footer-inner">
         <a class="brand footer-brand" href="#inicio"><span class="brand-mark" aria-hidden="true">AT</span><span class="brand-name">ADRIÁN TORRES<span class="brand-period">.</span></span></a>
         <p><span>ASIR · Córdoba, España</span><span>© <span id="current-year"></span> Adrián Torres</span></p>
-        <a class="back-top" href="#inicio">Inicio <span aria-hidden="true">↑</span></a>
+        <div class="footer-actions">
+          <nav class="footer-feeds" aria-label="Suscripciones RSS y Atom">
+            <a href="rss.xml">RSS</a><a href="atom.xml">Atom</a>
+          </nav>
+          <a class="back-top" href="#inicio">Inicio <span aria-hidden="true">↑</span></a>
+        </div>
       </div>
     </footer>
 

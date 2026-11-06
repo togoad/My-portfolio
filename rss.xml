@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Portfolio de Adrián Torres</title>
+    <link>https://togoad.github.io/My-portfolio/</link>
+    <description>Formación, proyectos y perfil profesional de Adrián Torres.</description>
+    <language>es</language>
+    <lastBuildDate>Fri, 06 Nov 2026 12:00:00 +0100</lastBuildDate>
+    <item>
+      <title>Perfil de Adrián Torres</title>
+      <link>https://togoad.github.io/My-portfolio/index.html#perfil</link>
+      <description>Estudiante de ASIR en Córdoba, interesado en sistemas, redes y ciberseguridad.</description>
+      <guid isPermaLink="true">https://togoad.github.io/My-portfolio/index.html#perfil</guid>
+      <pubDate>Fri, 06 Nov 2026 12:00:00 +0100</pubDate>
+    </item>
+    <item>
+      <title>Proyectos técnicos</title>
+      <link>https://togoad.github.io/My-portfolio/index.html#proyectos</link>
+      <description>Instalación y reparación de equipos, sistemas Linux y Windows, y configuración de redes con Cisco Packet Tracer.</description>
+      <guid isPermaLink="true">https://togoad.github.io/My-portfolio/index.html#proyectos</guid>
+      <pubDate>Fri, 06 Nov 2026 12:00:00 +0100</pubDate>
+    </item>
+    <item>
+      <title>Formación en ASIR</title>
+      <link>https://togoad.github.io/My-portfolio/index.html#formacion</link>
+      <description>Formación en Administración de Sistemas Informáticos en Red en el IES Medina Azahara.</description>
+      <guid isPermaLink="true">https://togoad.github.io/My-portfolio/index.html#formacion</guid>
+      <pubDate>Fri, 06 Nov 2026 12:00:00 +0100</pubDate>
+    </item>
+    <item>
+      <title>Certificaciones</title>
+      <link>https://togoad.github.io/My-portfolio/curriculum.html#certificaciones</link>
+      <description>Certificaciones relacionadas con redes y Cisco Packet Tracer. Actualmente no hay certificaciones de programación.</description>
+      <guid isPermaLink="true">https://togoad.github.io/My-portfolio/curriculum.html#certificaciones</guid>
+      <pubDate>Fri, 06 Nov 2026 12:00:00 +0100</pubDate>
+    </item>
+  </channel>
+</rss>

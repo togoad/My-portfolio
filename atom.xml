@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>https://togoad.github.io/My-portfolio/</id>
+  <title>Portfolio de Adrián Torres</title>
+  <subtitle>Formación, proyectos y perfil profesional.</subtitle>
+  <updated>2026-11-06T12:00:00+01:00</updated>
+  <link rel="alternate" type="text/html" href="https://togoad.github.io/My-portfolio/" />
+  <link rel="self" type="application/atom+xml" href="https://togoad.github.io/My-portfolio/atom.xml" />
+  <author><name>Adrián Torres</name></author>
+  <entry>
+    <id>https://togoad.github.io/My-portfolio/index.html#perfil</id>
+    <title>Perfil de Adrián Torres</title>
+    <link rel="alternate" href="https://togoad.github.io/My-portfolio/index.html#perfil" />
+    <updated>2026-11-06T12:00:00+01:00</updated>
+    <summary>Estudiante de ASIR en Córdoba, interesado en sistemas, redes y ciberseguridad.</summary>
+  </entry>
+  <entry>
+    <id>https://togoad.github.io/My-portfolio/index.html#proyectos</id>
+    <title>Proyectos técnicos</title>
+    <link rel="alternate" href="https://togoad.github.io/My-portfolio/index.html#proyectos" />
+    <updated>2026-11-06T12:00:00+01:00</updated>
+    <summary>Instalación y reparación de equipos, sistemas Linux y Windows, y configuración de redes con Cisco Packet Tracer.</summary>
+  </entry>
+  <entry>
+    <id>https://togoad.github.io/My-portfolio/index.html#formacion</id>
+    <title>Formación en ASIR</title>
+    <link rel="alternate" href="https://togoad.github.io/My-portfolio/index.html#formacion" />
+    <updated>2026-11-06T12:00:00+01:00</updated>
+    <summary>Formación en Administración de Sistemas Informáticos en Red en el IES Medina Azahara.</summary>
+  </entry>
+  <entry>
+    <id>https://togoad.github.io/My-portfolio/curriculum.html#certificaciones</id>
+    <title>Certificaciones</title>
+    <link rel="alternate" href="https://togoad.github.io/My-portfolio/curriculum.html#certificaciones" />
+    <updated>2026-11-06T12:00:00+01:00</updated>
+    <summary>Certificaciones relacionadas con redes y Cisco Packet Tracer. Actualmente no hay certificaciones de programación.</summary>
+  </entry>
+</feed>
