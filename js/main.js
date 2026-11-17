@@ -23,6 +23,10 @@ if (menuToggle && primaryNavigation) {
   });
 }
 
+document.querySelector("[data-drive-placeholder]")?.addEventListener("click", (event) => {
+  event.preventDefault();
+});
+
 const translations = {
   "Saltar al contenido": "Skip to content",
   "Menú": "Menu",
@@ -41,6 +45,25 @@ const translations = {
   "Claro": "Light",
   "Oscuro": "Dark",
   "ASIR · Córdoba, España": "ASIR · Córdoba, Spain",
+  "estudiante de ASIR y futuro especialista en ciberseguridad. Me apasionan los ordenadores, la programación y la seguridad informática.": "an ASIR student and future cybersecurity specialist. I’m passionate about computers, programming, and information security.",
+  "Especialista en ciberseguridad": "Cybersecurity specialist",
+  "¿Quién soy?": "Who am I?",
+  "Soy Adrián, un chico apasionado por el mundo de los ordenadores, la programación y, sobre todo, la seguridad informática. Desde pequeño me ha despertado curiosidad todo lo relacionado con los ordenadores; con el paso del tiempo, esa curiosidad se ha convertido en una pasión que sigue acompañándome. Me considero una persona tranquila y amable, con muchas ganas de aprender e investigar nuevas ideas dentro del mundo de la informática.": "I’m Adrián, and I’m passionate about computers, programming, and especially information security. I’ve been curious about computers since I was young, and that curiosity has grown into a passion that is still with me. I consider myself calm and kind, and I love learning and exploring new ideas in the world of computing.",
+  "ERP": "ERP",
+  "WEB": "WEB",
+  "AUTOMATIZACIÓN": "AUTOMATION",
+  "Enfocado en empresas": "Focused on businesses",
+  "Mi trayectoria": "My journey",
+  "y mi objetivo profesional.": "and my career goal.",
+  "Actualmente curso ASIR, una base para alcanzar mi objetivo: convertirme en especialista en ciberseguridad.": "I’m currently studying ASIR, building a foundation to reach my goal: becoming a cybersecurity specialist.",
+  "Estoy cursando ASIR para consolidar mis conocimientos de sistemas y redes y avanzar hacia mi objetivo profesional en ciberseguridad.": "I’m studying ASIR to strengthen my systems and networking knowledge and progress toward my career goal in cybersecurity.",
+  "Resumen profesional": "Professional summary",
+  "Currículum básico": "Basic résumé",
+  "Estudiante de ASIR · Objetivo: especialista en ciberseguridad.": "ASIR student · Goal: cybersecurity specialist.",
+  "Intereses: ordenadores, programación y seguridad informática. Perfil tranquilo, amable y con ganas de aprender e investigar.": "Interests: computers, programming, and information security. Calm and kind, with a strong interest in learning and exploring.",
+  "Currículum completo y detallado": "Full, detailed résumé",
+  "Ver currículum completo y detallado": "View full, detailed résumé",
+  "El enlace al documento de Drive se añadirá aquí.": "The link to the Drive document will be added here.",
   "En formación": "In training",
   "Entender los sistemas.": "Understand systems.",
   "Aprender a protegerlos.": "Learn to protect them.",
@@ -423,8 +446,8 @@ const fixedPortfolioAnswers = [
   },
   {
     topics: ["proyecto", "proyectos", "portfolio", "projects", "project"],
-    es: "El portfolio presenta tres áreas: instalación y reparación de equipos; instalación, configuración y administración de sistemas Linux y Windows; y configuración de redes con Cisco Packet Tracer.",
-    en: "The portfolio features three areas: computer installation and repair; installation, configuration, and administration of Linux and Windows systems; and network configuration with Cisco Packet Tracer."
+    es: "El portfolio presenta tres proyectos: desarrollo de una aplicación ERP, desarrollo web y automatizaciones enfocadas en empresas.",
+    en: "The portfolio features three projects: an ERP application, website development, and automations focused on businesses."
   },
   {
     topics: ["oportunidad", "oportunidades", "practicas", "trabajo", "empleo", "busca", "objetivo", "internship", "job", "opportunities", "looking for"],
@@ -448,13 +471,13 @@ const fixedPortfolioAnswers = [
   },
   {
     topics: ["curriculum", "curriculo", "resume", "cv"],
-    es: "El currículum completo se consulta en el apartado «Currículum» del menú superior. No se descarga ningún archivo.",
-    en: "The full résumé is available in the “Résumé” section of the top menu. No file is downloaded."
+    es: "En la sección de carrera profesional encontrarás un currículum básico. El enlace al currículum completo y detallado de Drive se añadirá próximamente.",
+    en: "The career section includes a basic résumé. A link to the full, detailed résumé on Drive will be added soon."
   },
   {
     topics: ["perfil", "quien es", "quien eres", "sobre adrian", "about", "profile", "background"],
-    es: "Adrián Torres es estudiante de ASIR en Córdoba. Está desarrollando una base técnica en sistemas y redes, y quiere especializarse en ciberseguridad.",
-    en: "Adrián Torres is an ASIR student in Córdoba, Spain. He is building a technical foundation in systems and networking, with the goal of specializing in cybersecurity."
+    es: "Adrián Torres es estudiante de ASIR y su objetivo profesional es convertirse en especialista en ciberseguridad.",
+    en: "Adrián Torres is an ASIR student whose career goal is to become a cybersecurity specialist."
   }
 ];
 
