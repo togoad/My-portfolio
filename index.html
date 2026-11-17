@@ -3,266 +3,123 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#f5f7ff">
-    <script>
-      try {
-        const savedTheme = localStorage.getItem("portfolio-theme");
-        const savedLanguage = localStorage.getItem("portfolio-language");
-        const savedMotion = localStorage.getItem("portfolio-motion");
-        document.documentElement.dataset.theme = savedTheme === "dark" ? "dark" : "light";
-        document.documentElement.dataset.animations = savedMotion === "off" ? "off" : "on";
-        document.documentElement.lang = savedLanguage === "en" ? "en" : "es";
-      } catch (_) {
-        document.documentElement.dataset.theme = "light";
-        document.documentElement.dataset.animations = "on";
-      }
-    </script>
-    <meta name="description" content="Portfolio de Adrián Torres, estudiante de Administración de Sistemas Informáticos en Red con interés en ciberseguridad.">
+    <meta name="theme-color" content="#fbfaf7">
+    <meta name="description" content="Portfolio de Adrián Torres, estudiante de ASIR con el objetivo de especializarse en ciberseguridad.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Adrián Torres — Sistemas y ciberseguridad">
-    <meta property="og:description" content="Formación, proyectos y trayectoria de Adrián Torres.">
+    <meta property="og:description" content="Portfolio, proyectos y carrera profesional de Adrián Torres.">
     <title>Adrián Torres — Sistemas y ciberseguridad</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="alternate" type="application/rss+xml" title="Portfolio de Adrián Torres (RSS)" href="rss.xml">
     <link rel="alternate" type="application/atom+xml" title="Portfolio de Adrián Torres (Atom)" href="atom.xml">
-    <script src="js/main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/v1-4.css">
   </head>
-
-  <body>
+  <body class="portfolio-v14">
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
-
-    <header class="site-header" id="inicio">
-      <div class="container nav-shell">
-        <a class="brand" href="#inicio" aria-label="Adrián Torres, inicio">
-          <span class="brand-mark" aria-hidden="true">AT</span>
-          <span class="brand-name">ADRIÁN TORRES<span class="brand-period">.</span></span>
-        </a>
-
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
-          <span class="menu-toggle-label">Menú</span>
-          <span class="menu-icon" aria-hidden="true"><span></span><span></span></span>
-        </button>
-
-        <nav class="nav-links" id="primary-navigation" aria-label="Navegación principal">
+    <header class="v14-topbar" id="inicio">
+      <div class="v14-topbar-inner">
+        <a class="v14-brand" href="#inicio" aria-label="Adrián Torres, inicio"><span class="v14-brand-mark">AT</span><span>ADRIÁN TORRES</span></a>
+        <details class="v14-menu">
+          <summary aria-label="Abrir menú">Menú <span aria-hidden="true">☰</span></summary>
+          <nav class="v14-nav" aria-label="Navegación principal">
+            <a href="#perfil">Quién soy</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#trayectoria">Carrera profesional</a>
+            <a href="#contacto">Contacto</a>
+          </nav>
+        </details>
+        <nav class="v14-nav v14-nav-desktop" aria-label="Navegación principal">
           <a href="#perfil">Quién soy</a>
           <a href="#proyectos">Proyectos</a>
-          <a href="#formacion">Carrera profesional</a>
-          <a href="curriculum.html">Currículum</a>
-          <a class="nav-cta" href="#contacto">Contacto <span aria-hidden="true">↗</span></a>
-          <details class="preferences">
-            <summary><span class="preferences-symbol" aria-hidden="true">◐</span><span>Ajustes</span></summary>
-            <div class="preferences-panel">
-              <fieldset class="preference-group">
-                <legend>Idioma</legend>
-                <div class="preference-options"><button type="button" data-language-choice="es" aria-pressed="true">ES</button><button type="button" data-language-choice="en" aria-pressed="false">EN</button></div>
-              </fieldset>
-              <fieldset class="preference-group">
-                <legend>Aspecto</legend>
-                <div class="preference-options"><button type="button" data-theme-choice="light" aria-pressed="true">Claro</button><button type="button" data-theme-choice="dark" aria-pressed="false">Oscuro</button></div>
-              </fieldset>
-              <fieldset class="preference-group">
-                <legend>Movimiento</legend>
-                <button class="motion-toggle" type="button" data-motion-toggle aria-pressed="true"><span class="motion-indicator" aria-hidden="true"></span><span data-motion-label>Animaciones: activadas</span></button>
-              </fieldset>
-            </div>
-          </details>
+          <a href="#trayectoria">Carrera profesional</a>
+          <a href="#contacto">Contacto</a>
         </nav>
       </div>
     </header>
 
-    <main id="contenido">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-grid container">
-          <div class="hero-copy">
-            <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> ASIR · Córdoba, España <span class="eyebrow-divider">/</span> En formación</p>
-            <h1 id="hero-title">Entender los sistemas.<br><span class="highlight">Aprender a protegerlos.</span></h1>
-            <p class="hero-intro">
-              Soy <strong>Adrián Torres</strong>, estudiante de ASIR y futuro especialista en ciberseguridad.
-              Me apasionan los ordenadores, la programación y la seguridad informática.
-            </p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#proyectos">Explorar proyectos <span aria-hidden="true">↓</span></a>
-              <a class="button button-outline" href="curriculum.html">Ver currículum <span aria-hidden="true">↗</span></a>
-            </div>
-            <p class="hero-note"><span aria-hidden="true">//</span> Busco prácticas y oportunidades laborales iniciales.</p>
+    <div class="v14-layout">
+      <aside class="v14-sidebar" aria-label="Perfil y contacto">
+        <section class="v14-sidebar-profile" id="perfil">
+          <h1>ADRIÁN<br>TORRES</h1>
+          <span class="v14-accent-line" aria-hidden="true"></span>
+          <h2>Estudiante de ASIR</h2>
+          <p>Estudiante del Ciclo Formativo de Grado Superior en Administración de Sistemas Informáticos en Red (ASIR), con el objetivo de especializarme en ciberseguridad.</p>
+        </section>
+        <section class="v14-sidebar-contact" id="contacto" aria-label="Contacto y disponibilidad">
+          <div class="v14-contact-row">
+            <span class="v14-line-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="3" y="6" width="26" height="20" rx="2"/><path d="m4 8 12 10L28 8"/></svg></span>
+            <div><h2>Contacto</h2><a href="mailto:atorgom3001@gmail.com">atorgom3001@gmail.com</a></div>
           </div>
-
-          <div class="hero-visual" aria-label="Panel de perfil de Adrián Torres">
-            <div class="visual-grid" aria-hidden="true"></div>
-            <div class="scan-line" aria-hidden="true"></div>
-            <div class="terminal-card">
-              <div class="terminal-topbar">
-                <span class="terminal-lights" aria-hidden="true"><i></i><i></i><i></i></span>
-                <span>perfil_adrian.json</span>
-                <span class="terminal-lock" aria-hidden="true">●</span>
-              </div>
-              <div class="terminal-body" aria-label="Datos del perfil">
-                <p><span class="terminal-prompt">$</span> whoami</p>
-                <p class="terminal-value">Adrián Torres</p>
-                <p><span class="terminal-prompt">$</span> formación</p>
-                <p class="terminal-value">ASIR <span class="terminal-comment">// en curso</span></p>
-                <p><span class="terminal-prompt">$</span> objetivo</p>
-                <p class="terminal-value">Especialista en ciberseguridad<span class="cursor" aria-hidden="true"></span></p>
-                <div class="terminal-divider"></div>
-                <div class="terminal-status"><span class="status-dot" aria-hidden="true"></span><span>STATUS: LEARNING_MODE</span><span class="terminal-version">v.01</span></div>
-              </div>
-            </div>
-            <div class="visual-coordinate" aria-hidden="true">37°53' N&nbsp;&nbsp; 4°46' W</div>
-            <div class="visual-orbit orbit-a" aria-hidden="true"></div>
-            <div class="visual-orbit orbit-b" aria-hidden="true"></div>
+          <div class="v14-contact-row v14-availability">
+            <span class="v14-line-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="4" y="10" width="24" height="17" rx="2"/><path d="M11 10V6h10v4M4 17h24M14 17v3h4v-3"/></svg></span>
+            <p>Actualmente busco empresa donde realizar mis prácticas</p>
           </div>
-        </div>
+        </section>
+      </aside>
 
-        <div class="hero-bottom container" aria-label="Áreas de interés">
-          <span class="hero-bottom-label">Entornos y enfoque</span>
-          <span>Linux</span><span class="separator" aria-hidden="true">/</span>
-          <span>Windows</span><span class="separator" aria-hidden="true">/</span>
-          <span>Cisco Packet Tracer</span><span class="separator" aria-hidden="true">/</span>
-          <span>Ciberseguridad</span>
-        </div>
-      </section>
+      <main class="v14-main" id="contenido">
+        <section class="v14-hero" aria-labelledby="hero-title">
+          <p class="v14-kicker">ASIR <span>|</span> SISTEMAS <span>|</span> CIBERSEGURIDAD</p>
+          <h2 id="hero-title">Tecnología, sistemas y<br>ciberseguridad <span>/</span></h2>
+          <p class="v14-hero-copy">Formación técnica, proyectos prácticos y una meta clara: desarrollar mi carrera como especialista en ciberseguridad.</p>
+        </section>
 
-      <section class="section section-about" id="perfil" aria-labelledby="about-title">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow"><span class="section-index">01</span> Quién soy</p>
-            <h2 id="about-title">¿Quién soy?</h2>
-          </div>
-          <div class="about-grid">
-            <div class="about-text">
-              <p class="lead-copy">
-                Soy Adrián, un chico apasionado por el mundo de los ordenadores, la programación y, sobre todo, la seguridad informática. Desde pequeño me ha despertado curiosidad todo lo relacionado con los ordenadores; con el paso del tiempo, esa curiosidad se ha convertido en una pasión que sigue acompañándome. Me considero una persona tranquila y amable, con muchas ganas de aprender e investigar nuevas ideas dentro del mundo de la informática.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-work" id="proyectos" aria-labelledby="projects-title">
-        <div class="container">
-          <div class="section-heading heading-inline">
-            <div><p class="eyebrow"><span class="section-index">02</span> Proyectos</p><h2 id="projects-title">Ideas en marcha<br><span class="muted-heading">y trabajo por compartir.</span></h2></div>
-            <p class="heading-aside">Proyectos en los que he trabajado y nuevas iniciativas en desarrollo.</p>
-          </div>
-
-          <div class="project-grid">
-            <article class="project-card project-template">
-              <div class="project-card-top"><span class="project-index">ERP</span><span class="project-state">EN DESARROLLO</span></div>
-              <div class="project-icon icon-code" aria-hidden="true">▣</div>
-              <p class="project-type">APLICACIÓN DE GESTIÓN</p>
-              <h3>Desarrollo de aplicación ERP</h3>
-              <p class="project-description">Desarrollo de una aplicación ERP para reunir y facilitar la gestión de procesos empresariales.</p>
-              <div class="project-details"><p><strong>Estado</strong><span>En desarrollo</span></p><p><strong>Disponibilidad</strong><span>Descarga próximamente</span></p></div>
-              <span class="project-link">Descarga próximamente <span aria-hidden="true">↗</span></span>
+        <section class="v14-projects" id="proyectos" aria-labelledby="projects-title">
+          <div class="v14-section-heading"><h2 id="projects-title">Proyectos</h2><span aria-hidden="true"></span></div>
+          <div class="v14-project-grid">
+            <article class="v14-project-card">
+              <span class="v14-project-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="m3 9 13-6 13 6-13 7L3 9Z M3 16l13 7 13-7M3 22l13 7 13-7"/></svg></span>
+              <div><h3>ERP</h3><p>Gestión y administración de soluciones ERP.</p></div>
+              <span class="v14-arrow" aria-hidden="true">→</span>
             </article>
-
-            <article class="project-card project-template">
-              <div class="project-card-top"><span class="project-index">WEB</span><span class="project-state">EN DESARROLLO</span></div>
-              <div class="project-icon icon-network" aria-hidden="true">⌘</div>
-              <p class="project-type">DISEÑO Y DESARROLLO WEB</p>
-              <h3>Desarrollo de página web</h3>
-              <p class="project-description">Creación de páginas web para presentar ideas, proyectos y servicios de forma clara y accesible.</p>
-              <div class="project-details"><p><strong>Ámbito</strong><span>Desarrollo web</span></p><p><strong>Estado</strong><span>En desarrollo</span></p></div>
+            <article class="v14-project-card">
+              <span class="v14-project-icon v14-code-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="m11 7-9 9 9 9M21 7l9 9-9 9M19 4l-6 24"/></svg></span>
+              <div><h3>Desarrollo web</h3><p>Creación y mantenimiento de aplicaciones web.</p></div>
+              <span class="v14-arrow" aria-hidden="true">→</span>
             </article>
-
-            <article class="project-card project-template">
-              <div class="project-card-top"><span class="project-index">AUTOMATIZACIÓN</span><span class="project-state">EN DESARROLLO</span></div>
-              <div class="project-icon" aria-hidden="true">↻</div>
-              <p class="project-type">AUTOMATIZACIÓN DE PROCESOS</p>
-              <h3>Desarrollo de automatizaciones</h3>
-              <p class="project-description">Diseño de automatizaciones para simplificar tareas repetitivas y mejorar procesos.</p>
-              <div class="project-details"><p><strong>Enfoque</strong><span>Empresas</span></p><p><strong>Estado</strong><span>En desarrollo</span></p></div>
-              <p class="project-secondary">Enfocado en empresas</p>
+            <article class="v14-project-card">
+              <span class="v14-project-icon v14-gear-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M13 3h6l1 4 3 2 4-1 3 5-3 3v4l3 3-3 5-4-1-3 2-1 4h-6l-1-4-3-2-4 1-3-5 3-3v-4l-3-3 3-5 4 1 3-2 1-4Z"/><circle cx="16" cy="17" r="4"/></svg></span>
+              <div><h3>Automatizaciones</h3><p>Automatización de tareas y procesos de sistemas.</p></div>
+              <span class="v14-arrow" aria-hidden="true">→</span>
             </article>
           </div>
-          <p class="section-footnote"><span aria-hidden="true">+</span> Más proyectos próximamente.</p>
-        </div>
-      </section>
+        </section>
 
-      <section class="section section-experience" id="formacion" aria-labelledby="education-title">
-        <div class="container experience-grid">
-          <div class="experience-intro">
-            <p class="eyebrow"><span class="section-index">03</span> Carrera profesional</p>
-            <h2 id="education-title">Mi trayectoria<br><span class="muted-heading">y mi objetivo profesional.</span></h2>
-            <p>Actualmente curso ASIR, una base para alcanzar mi objetivo: convertirme en especialista en ciberseguridad.</p>
-          </div>
-          <div class="timeline">
-            <article class="timeline-item">
-              <div class="timeline-date">ACTUALIDAD · ASIR</div>
-              <div><h3>Administración de Sistemas Informáticos en Red (ASIR)</h3><p class="timeline-org">IES Medina Azahara <span>·</span> Córdoba, España</p><p>Estoy cursando ASIR para consolidar mis conocimientos de sistemas y redes y avanzar hacia mi objetivo profesional en ciberseguridad.</p></div>
+        <section class="v14-career" id="trayectoria" aria-labelledby="career-title">
+          <div class="v14-section-heading"><h2 id="career-title">Carrera profesional - ASIR</h2><span aria-hidden="true"></span></div>
+          <div class="v14-timeline">
+            <article class="v14-milestone">
+              <span class="v14-node" aria-hidden="true"></span>
+              <h3>Inicio de ASIR</h3>
+              <p>Formación en sistemas y redes.</p>
             </article>
-            <article class="timeline-item timeline-next">
-              <div class="timeline-date">SIGUIENTE OBJETIVO</div>
-              <div><h3>Especialización en ciberseguridad</h3><p class="timeline-org">Formación futura</p><p>Continuar mi recorrido con un curso de especialización en ciberseguridad.</p></div>
+            <article class="v14-milestone">
+              <span class="v14-node v14-node-open" aria-hidden="true"></span>
+              <h3>Obtención de certificaciones</h3>
+              <p>Administración, servicios y seguridad.</p>
+            </article>
+            <article class="v14-milestone">
+              <span class="v14-node" aria-hidden="true"></span>
+              <h3>Especialización</h3>
+              <p>Meta: convertirme en especialista en ciberseguridad.</p>
             </article>
           </div>
-          <section class="basic-resume" aria-labelledby="basic-resume-title">
-            <p class="eyebrow">Resumen profesional</p>
-            <h3 id="basic-resume-title">Currículum básico</h3>
-            <p><strong>Adrián Torres</strong> · Estudiante de ASIR · Objetivo: especialista en ciberseguridad.</p>
-            <p>Intereses: ordenadores, programación y seguridad informática. Perfil tranquilo, amable y con ganas de aprender e investigar.</p>
-            <h3 class="full-resume-title">Currículum completo y detallado</h3>
-            <a class="button button-primary cv-drive-button" href="#curriculum-drive" data-drive-placeholder aria-disabled="true">Ver currículum completo y detallado <span aria-hidden="true">↗</span></a>
-            <p class="resume-link-note">El enlace al documento de Drive se añadirá aquí.</p>
-          </section>
-        </div>
-      </section>
+        </section>
+      </main>
+    </div>
 
-      <section class="contact-section" id="contacto" aria-labelledby="contact-title">
-        <div class="container contact-card">
-          <p class="eyebrow"><span class="section-index">04</span> Contacto</p>
-          <h2 id="contact-title">¿Hablamos de<br><span>tecnología?</span></h2>
-          <p class="contact-copy">Busco oportunidades laborales y un lugar donde realizar las prácticas de ASIR. Me interesan los sistemas, las redes, el soporte técnico y la ciberseguridad.</p>
-          <div class="contact-actions">
-            <a class="button button-primary" href="mailto:atorgom3001@gmail.com?subject=Oportunidad%20profesional">atorgom3001@gmail.com <span aria-hidden="true">↗</span></a>
-            <a class="contact-secondary" href="curriculum.html">Consultar mi currículum <span aria-hidden="true">→</span></a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <a class="brand footer-brand" href="#inicio"><span class="brand-mark" aria-hidden="true">AT</span><span class="brand-name">ADRIÁN TORRES<span class="brand-period">.</span></span></a>
-        <p><span>ASIR · Córdoba, España</span><span>© <span id="current-year"></span> Adrián Torres</span></p>
-        <div class="footer-actions">
-          <nav class="footer-feeds" aria-label="Suscripciones RSS y Atom">
-            <a href="rss.xml">RSS</a><a href="atom.xml">Atom</a>
-          </nav>
-          <a class="back-top" href="#inicio">Inicio <span aria-hidden="true">↑</span></a>
-        </div>
+    <footer class="v14-footer">
+      <div class="v14-footer-inner">
+        <a class="v14-footer-brand" href="#inicio"><span class="v14-brand-mark">AT</span><span>ADRIÁN TORRES</span></a>
+        <span class="v14-footer-summary">Sistemas · Desarrollo · Ciberseguridad</span>
+        <nav aria-label="Navegación de pie de página">
+          <a href="#perfil">Quién soy</a><a href="#proyectos">Proyectos</a><a href="#trayectoria">Carrera profesional</a><a href="#contacto">Contacto</a>
+        </nav>
       </div>
     </footer>
-
-    <div class="assistant-widget" data-assistant-widget>
-      <button class="assistant-launcher" type="button" data-assistant-open aria-expanded="false" aria-controls="assistant-panel">
-        <span class="assistant-launcher-icon" aria-hidden="true">✳</span><span>Consulta mi portfolio</span>
-      </button>
-      <section class="assistant-panel" id="assistant-panel" data-assistant-panel aria-labelledby="assistant-title" hidden>
-        <header class="assistant-header">
-          <div><p class="assistant-overline"><span class="assistant-faq-dot" aria-hidden="true"></span> Respuestas del portfolio</p><h2 id="assistant-title">¿Qué quieres saber de Adrián?</h2></div>
-          <button class="assistant-close" type="button" data-assistant-close aria-label="Cerrar asistente">×</button>
-        </header>
-        <p class="assistant-scope">Respuestas fijas sobre Adrián y la información publicada en este portfolio.</p>
-        <div class="assistant-suggestions" data-assistant-suggestions aria-label="Preguntas frecuentes">
-          <button type="button" data-assistant-question-es="¿Qué conocimientos tiene Adrián?" data-assistant-question-en="What skills does Adrián have?">¿Qué conocimientos tiene?</button>
-          <button type="button" data-assistant-question-es="¿Qué oportunidades busca Adrián?" data-assistant-question-en="What opportunities is Adrián looking for?">¿Qué oportunidades busca?</button>
-          <button type="button" data-assistant-question-es="¿Qué proyectos aparecen en el portfolio?" data-assistant-question-en="What projects are in the portfolio?">¿Qué proyectos aparecen?</button>
-        </div>
-        <div class="assistant-messages" data-assistant-messages role="log" aria-live="polite" aria-relevant="additions">
-          <p class="assistant-welcome">Hola. Elige una pregunta o escribe un tema. Las respuestas se basan en la información publicada en este portfolio.</p>
-        </div>
-        <form class="assistant-form" data-assistant-form>
-          <label class="sr-only" for="assistant-question">Escribe una pregunta sobre Adrián</label>
-          <input id="assistant-question" name="question" type="text" maxlength="500" placeholder="Pregunta por formación, proyectos, conocimientos…" autocomplete="off" required>
-          <button type="submit" aria-label="Enviar pregunta">Enviar <span aria-hidden="true">↑</span></button>
-        </form>
-        <p class="assistant-privacy">Respuestas predefinidas · Tu pregunta no se envía a ningún servicio externo.</p>
-      </section>
-    </div>
   </body>
 </html>
