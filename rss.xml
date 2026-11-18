@@ -3,36 +3,44 @@
   <channel>
     <title>Portfolio de Adrián Torres</title>
     <link>https://togoad.github.io/My-portfolio/</link>
-    <description>Formación, proyectos y perfil profesional de Adrián Torres.</description>
-    <language>es</language>
-    <lastBuildDate>Fri, 06 Nov 2026 12:00:00 +0100</lastBuildDate>
+    <description>Perfil, proyectos y formación de Adrián Torres, estudiante de ASIR interesado en sistemas, redes y ciberseguridad.</description>
+    <language>es-es</language>
+    <category>tecnología</category>
+    <category>sistemas</category>
+    <category>ciberseguridad</category>
+    <copyright>© 2026 Adrián Torres</copyright>
+    <lastBuildDate>Wed, 18 Nov 2026 13:25:05 +0100</lastBuildDate>
     <item>
       <title>Perfil de Adrián Torres</title>
       <link>https://togoad.github.io/My-portfolio/index.html#perfil</link>
-      <description>Estudiante de ASIR en Córdoba, interesado en sistemas, redes y ciberseguridad.</description>
+      <description>Estudiante de ASIR en Córdoba, con interés en administración de sistemas, redes y ciberseguridad.</description>
+      <category>perfil</category>
       <guid isPermaLink="true">https://togoad.github.io/My-portfolio/index.html#perfil</guid>
-      <pubDate>Fri, 06 Nov 2026 12:00:00 +0100</pubDate>
+      <pubDate>Wed, 18 Nov 2026 13:25:05 +0100</pubDate>
     </item>
     <item>
-      <title>Proyectos técnicos</title>
+      <title>Proyectos: ERP, desarrollo web y automatización</title>
       <link>https://togoad.github.io/My-portfolio/index.html#proyectos</link>
-      <description>Instalación y reparación de equipos, sistemas Linux y Windows, y configuración de redes con Cisco Packet Tracer.</description>
+      <description>Presentación de las áreas de proyecto del portfolio: soluciones ERP, desarrollo web y automatización de tareas y procesos.</description>
+      <category>proyectos</category>
       <guid isPermaLink="true">https://togoad.github.io/My-portfolio/index.html#proyectos</guid>
-      <pubDate>Fri, 06 Nov 2026 12:00:00 +0100</pubDate>
+      <pubDate>Wed, 18 Nov 2026 13:25:05 +0100</pubDate>
     </item>
     <item>
       <title>Formación en ASIR</title>
-      <link>https://togoad.github.io/My-portfolio/index.html#formacion</link>
+      <link>https://togoad.github.io/My-portfolio/curriculum.html#formacion</link>
       <description>Formación en Administración de Sistemas Informáticos en Red en el IES Medina Azahara.</description>
-      <guid isPermaLink="true">https://togoad.github.io/My-portfolio/index.html#formacion</guid>
-      <pubDate>Fri, 06 Nov 2026 12:00:00 +0100</pubDate>
+      <category>formación</category>
+      <guid isPermaLink="true">https://togoad.github.io/My-portfolio/curriculum.html#formacion</guid>
+      <pubDate>Wed, 18 Nov 2026 13:25:05 +0100</pubDate>
     </item>
     <item>
       <title>Certificaciones</title>
       <link>https://togoad.github.io/My-portfolio/curriculum.html#certificaciones</link>
       <description>Certificaciones relacionadas con redes y Cisco Packet Tracer. Actualmente no hay certificaciones de programación.</description>
+      <category>certificaciones</category>
       <guid isPermaLink="true">https://togoad.github.io/My-portfolio/curriculum.html#certificaciones</guid>
-      <pubDate>Fri, 06 Nov 2026 12:00:00 +0100</pubDate>
+      <pubDate>Wed, 18 Nov 2026 13:25:05 +0100</pubDate>
     </item>
   </channel>
 </rss>
