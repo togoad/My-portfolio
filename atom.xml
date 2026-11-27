@@ -3,7 +3,7 @@
   <id>https://togoad.github.io/My-portfolio/</id>
   <title>Portfolio de Adrián Torres</title>
   <subtitle>Perfil, proyectos y formación de Adrián Torres, estudiante de ASIR interesado en sistemas, redes y ciberseguridad.</subtitle>
-  <updated>2026-11-18T13:25:05+01:00</updated>
+  <updated>2026-11-27T11:13:51+01:00</updated>
   <link rel="alternate" type="text/html" href="https://togoad.github.io/My-portfolio/" />
   <link rel="self" type="application/atom+xml" href="https://togoad.github.io/My-portfolio/atom.xml" />
   <link rel="alternate" type="application/rss+xml" href="https://togoad.github.io/My-portfolio/rss.xml" />
@@ -45,5 +45,14 @@
     <category term="certificaciones" />
     <updated>2026-11-18T13:25:05+01:00</updated>
     <summary>Certificaciones relacionadas con redes y Cisco Packet Tracer. Actualmente no hay certificaciones de programación.</summary>
+  </entry>
+  <entry>
+    <id>https://togoad.github.io/My-portfolio/index.html#video-ia</id>
+    <title>IA y ciberseguridad: un campo en constante avance</title>
+    <link rel="alternate" href="https://togoad.github.io/My-portfolio/index.html#video-ia" />
+    <link rel="related" href="https://www.youtube.com/watch?v=Z67dvIGbYhg" />
+    <category term="ciberseguridad" />
+    <updated>2026-11-27T11:13:51+01:00</updated>
+    <summary>Vídeo complementario sobre el avance de la inteligencia artificial y su relación con la ciberseguridad.</summary>
   </entry>
 </feed>

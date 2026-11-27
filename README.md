@@ -4,7 +4,7 @@ Portfolio profesional de Adrián Torres, preparado para publicarse en GitHub Pag
 
 ## Estructura
 
-- `index.html`: página principal.
+- `index.html`: página principal con un vídeo secundario de IA y ciberseguridad en la barra lateral.
 - `curriculum.html`: currículum y proyectos.
 - `css/styles.css`: estilos separados del HTML.
 - `js/main.js`: interacciones y respuestas predefinidas del portfolio.
